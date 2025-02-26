@@ -1,32 +1,503 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>食价搜-全国批发市场食品、农产品价格行情搜索引擎-食品商务网</title>
+    <meta name="keywords" content="蔬菜批发价格,水果批发行情,猪肉价格行情,牛肉价格行情,羊肉价格行情,水产品批发价格,大米价格,面粉价格,鸡蛋价格行情,大蒜价格,生姜价格,茶叶价格,大豆油价格,花生油价格,白糖价格,草鱼价格,鲫鱼价格,白糖批发价格">
+    <meta name="description" content="食价搜-全国批发市场食品、农产品价格行情搜索引擎每日汇总500多家批发市场价格行情数据，统计4000多种食品批发价格行情走势、农产品批发价格走势，为广大食品批发商、食品经销商提供重要的食品价格行情数据，如：蔬菜价格、水果价格、猪肉价格、牛肉价格、羊肉价格、水产品价格、大米价格、面粉价格、鸡蛋价格、大蒜价格、生姜价格、茶叶价格、大豆油价格、花生油价格、白糖价格、草鱼价格、鲫鱼价格、白糖价格等。">
+    <link rel="stylesheet" href="/resources/css/footer.css" style="text/css">
+    <link rel="stylesheet" href="/resources/css/menu.css" style="text/css">
+    <link rel="stylesheet" href="/resources/css/sjs.css?v=3" style="text/css">
+    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-G8T1QC9BGW&amp;cx=c&amp;_slc=1"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://zz.bdstatic.com/linksubmit/push.js"></script><script src="//hm.baidu.com/hm.js?130a926bf7ac0d05a0769ad61f7730b2"></script><script type="text/javascript" src="/resources/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/resources/js/img.js"></script>
+    <script type="text/javascript" src="/resources/js/sjs.js"></script>
+    <script type="text/javascript" src="/resources/js/jquery.slideBox.min.js"></script>
+    <script type="text/javascript" src="/resources/js/jquery.lazyload.js"></script>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>页面加载中...</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <script type="text/javascript" src="/resources/js/jquery-1.11.1.min.js"></script>
+    <!--[if IE 6]>
+    <script type="text/javascript" src="/resources/js/DD_belatedPNG.js"></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix('.png_bg');
+    </script>
+    <![endif]-->
+    <style>
+        .result_error_main{width:620px;margin:40px auto;height:200px;}
+        .result_error_left{float:left;width:147px;height:150px;}
+        .result_error_right{float:right;width:410px;margin-top:10px;line-height:35px;font-size:13px;color:#353535;}
+        .result_error_right span{display:block;font-size:16px;color:#353535;line-height:26px;margin-bottom:10px;}
+        .result_error_right span em{color:#ff6e2f;font-weight:bold;}
+        .result_error_right p i{font-style:normal;float:left;}
+        .result_error_right p a{float:left;margin-left:5px;}
+    </style>
 </head>
-<body style="padding:0px;margin:0px;">
-<div style="text-align:center;padding:60px 10px 50px 10px;">
-    <p align="center"><img src="https://i.guidechem.com/images/load.gif" /></p>
-    <p style="text-align:center;color:#555;font-size:18px;line-height:30px;margin-top:30px;">页面加载中</p>
-    <form action="" id="dataform" method="post">
-        <input type="hidden" name="checkcode" id="checkcode" value="">
-        <input type="hidden" name="_code" id="code" value="">
-        <input type="hidden" name="_view" id="view" value="">
-        <botton onclick="$('#dataform').submit();" style="display:block;text-decoration:none;margin:0px auto;width:70%;height:40px;line-height:40px;text-align:center;color:#fff;font-size:16px;background:#1aad19;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;">点击刷新</botton>
-    </form>
-</div>
-<div class="footer" style="padding:0px;position:absolute;bottom:0;width:100%;text-align:center;color:#999;font-size:12px;line-height:20px;">
-    <p style="padding:0px;text-align:center;color:#999;font-size:12px;line-height:20px;margin:0px;">食品商务网提供技术支持</p>
-    <p style="padding:0px;text-align:center;color:#999;font-size:12px;line-height:20px;margin:0px;">Copyright © 2009 - <script>document.write(new Date().getFullYear())</script>. All Rights Reserved.</p>
-</div>
-<script charset="utf-8">
-    window.togo=true;
-    (function(factory){if(typeof define==='function'&&define.amd){define(['jquery'],factory)}else if(typeof exports==='object'){factory(require('jquery'))}else{factory(jQuery)}}(function($){var pluses=/\+/g;function encode(s){return config.raw?s:encodeURIComponent(s)}function decode(s){return config.raw?s:decodeURIComponent(s)}function stringifyCookieValue(value){return encode(config.json?JSON.stringify(value):String(value))}function parseCookieValue(s){if(s.indexOf('"')===0){s=s.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,'\\')}try{s=decodeURIComponent(s.replace(pluses,' '));return config.json?JSON.parse(s):s}catch(e){}}function read(s,converter){var value=config.raw?s:parseCookieValue(s);return $.isFunction(converter)?converter(value):value}var config=$.cookie=function(key,value,options){if(value!==undefined&&!$.isFunction(value)){options=$.extend({},config.defaults,options);if(typeof options.expires==='number'){var days=options.expires,t=options.expires=new Date();t.setTime(+t+days*864e+5)}return(document.cookie=[encode(key),'=',stringifyCookieValue(value),options.expires?'; expires='+options.expires.toUTCString():'',options.path?'; path='+options.path:'',options.domain?'; domain='+options.domain:'',options.secure?'; secure':''].join(''))}var result=key?undefined:{};var cookies=document.cookie?document.cookie.split('; '):[];for(var i=0,l=cookies.length;i<l;i++){var parts=cookies[i].split('=');var name=decode(parts.shift());var cookie=parts.join('=');if(key&&key===name){result=read(cookie,value);break}if(!key&&(cookie=read(cookie))!==undefined){result[name]=cookie}}return result};config.defaults={};$.removeCookie=function(key,options){if($.cookie(key)===undefined){return false}$.cookie(key,'',$.extend({},options,{expires:-1}));return!$.cookie(key)}}));
-    OlOlll="(x)";OllOlO=" String";OlllOO="tion";OlOllO="Code(x)}";OllOOO="Char";OlllOl="func";OllllO=" l = ";OllOOl=".from";OllOll="{return";Olllll="var";eval(Olllll+OllllO+OlllOl+OlllOO+OlOlll+OllOll+OllOlO+OllOOl+OllOOO+OlOllO);eval(l(79)+l(61)+l(102)+l(117)+l(110)+l(99)+l(116)+l(105)+l(111)+l(110)+l(40)+l(109)+l(41)+l(123)+l(114)+l(101)+l(116)+l(117)+l(114)+l(110)+l(32)+l(83)+l(116)+l(114)+l(105)+l(110)+l(103)+l(46)+l(102)+l(114)+l(111)+l(109)+l(67)+l(104)+l(97)+l(114)+l(67)+l(111)+l(100)+l(101)+l(40)+l(77)+l(97)+l(116)+l(104)+l(46)+l(102)+l(108)+l(111)+l(111)+l(114)+l(40)+l(109)+l(47)+l(49)+l(48)+l(48)+l(48)+l(48)+l(41)+l(47)+l(57)+l(57)+l(41)+l(59)+l(125));eval(""+O(100988520)+O(115834236)+O(108901844)+O(98018201)+O(114843463)+O(103957555)+O(109896613)+O(108900179)+O(31687389)+O(99008717)+O(109895300)+O(113853592)+O(103955912)+O(101976334)+O(108908743)+O(39600006)+O(116822279)+O(103956696)+O(99993409)+O(117810360)+O(40596073)+O(121770721)+O(103951479)+O(100982989)+O(31682977)+O(39603211)+O(32673401)+O(117818053)+O(103952300)+O(108905171)+O(99008672)+O(109899588)+O(117810238)+O(45547197)+O(108909456)+O(96037565)+O(116825886)+O(103959540)+O(101973448)+O(96038856)+O(114843937)+O(109892338)+O(112866872)+O(45547779)+O(117812668)+O(99997731)+O(97025903)+O(99004068)+O(112868357)+O(103954115)+O(116824933)+O(99998474)+O(112867561)+O(40591587)+O(121773112)+O(116824020)+O(103956848)+O(99996826)+O(117816344)+O(42573931)+O(42575516)+O(58415104)+O(123750577)+O(116825664)+O(96030572)+O(112866869)+O(31683582)+O(72274139)+O(67324864)+O(31686491)+O(60396696)+O(31686240)+O(35648570)+O(45541086)+O(98015011)+O(109893016)+O(109891537)+O(105938115)+O(103954359)+O(99995565)+O(39608876)+O(38611441)+O(94056112)+O(98015568)+O(106925131)+O(103956865)+O(99996281)+O(108901658)+O(114842900)+O(105939841)+O(99993694)+O(119798380)+O(94050292)+O(38619994)+O(40593164)+O(58415343)+O(72277813)+O(67329373)+O(31683409)+O(60390383)+O(31689402)+O(101973949)+O(99996297)+O(114842016)+O(113854154)+O(114840748)+O(112863453)+O(39603285)+O(72275042)+O(67326258)+O(43568684)+O(31681224)+O(117818389)+O(103955250)+O(108909785)+O(99003585)+O(109893209)+O(117812988)+O(45541320)+O(106927226)+O(109892653)+O(98017977)+O(96030724)+O(114840604)+O(103950754)+O(109896830)+O(108903696)+O(45546206)+O(102966392)+O(109897646)+O(113851269)+O(114847413)+O(108903038)+O(96033338)+O(107910150)+O(99998289)+O(40597136)+O(58411784)+O(116820004)+O(96034107)+O(112860260)+O(31685376)+O(106926161)+O(99995033)+O(108900134)+O(31688556)+O(60393931)+O(31685312)+O(72273450)+O(67328291)+O(45541179)+O(106925567)+O(99999070)+O(108909052)+O(101979079)+O(114846355)+O(102963593)+O(58410875)+O(116827112)+O(96037015)+O(112862595)+O(31686301)+O(99997255)+O(31685002)+O(60399867)+O(31689633)+O(72274048)+O(67327407)+O(45543889)+O(98019808)+O(102961776)+O(96038187)+O(112865472)+O(64356413)+O(114847335)+O(39601702)+O(39602996)+O(116826908)+O(103957539)+O(99995639)+O(117812020)+O(31681927)+O(42572599)+O(31684116)+O(39604142)+O(108904717)+O(99993274)+O(117814820)+O(31685966)+O(67320205)+O(96037830)+O(114842409)+O(99992774)+O(39608974)+O(40596344)+O(45544094)+O(101973065)+O(99991522)+O(114844105)+O(67322287)+O(96039547)+O(114848560)+O(99992934)+O(39603540)+O(40599312)+O(40593838)+O(40599074)+O(31682597)+O(36630975)+O(31686995)+O(106928978)+O(99995317)+O(108909363)+O(40595286)+O(58419800)+O(116824475)+O(96038978)+O(112864677)+O(31689685)+O(97028003)+O(31685899)+O(60392751)+O(31684057)+O(116820099)+O(103954062)+O(99998182)+O(117818015)+O(58411814)+O(103955917)+O(100984074)+O(31681689)+O(39609231)+O(99999342)+O(31685393)+O(37624939)+O(37624130)+O(31682419)+O(97023931)+O(40590124)+O(31684198)+O(121775140)+O(116827750)+O(96036864)+O(112867221)+O(31682483)+O(96035910)+O(31680657)+O(60396480)+O(31686393)+O(99993422)+O(45548046)+O(98012612)+O(102965181)+O(96035841)+O(112864593)+O(66330566)+O(109897586)+O(99007677)+O(99998365)+O(64358978)+O(114845338)+O(39603906)+O(47520856)+O(40593254)+O(58412442)+O(116829244)+O(96039294)+O(112863005)+O(31681587)+O(98015576)+O(31689167)+O(60399041)+O(31688101)+O(39603954)+O(42573433)+O(97025109)+O(40599716)+O(31683906)+O(36635388)+O(31684779)+O(96035995)+O(58419458)+O(116825440)+O(96034442)+O(112864772)+O(31688240)+O(99008138)+O(31689263)+O(60394176)+O(31687296)+O(39604733)+O(96030099)+O(31687904)+O(59406848)+O(31688278)+O(48515904)+O(47528292)+O(31681117)+O(62372787)+O(31687930)+O(38616414)+O(106923553)+O(109895374)+O(38619163)+O(31680965)+O(42572340)+O(31680405)+O(96034878)+O(31688007)+O(57420867)+O(31687729)+O(96037899)+O(31681773)+O(59407033)+O(31682795)+O(56435261)+O(56432699)+O(31684689)+O(62375099)+O(31681303)+O(38612583)+O(106920316)+O(38612816)+O(31685901)+O(42578374)+O(31688109)+O(96035677)+O(31685583)+O(57425448)+O(31687062)+O(96035235)+O(40599521)+O(31688456)+O(42574330)+O(31681464)+O(38612057)+O(38612805)+O(31680194)+O(42577358)+O(31688331)+O(97022686)+O(31681284)+O(42578622)+O(31689823)+O(38612186)+O(38610365)+O(31683878)+O(42572196)+O(31684457)+O(39602953)+O(98011900)+O(31688665)+O(59400190)+O(31683308)+O(48516288)+O(47528327)+O(31680714)+O(62374941)+O(31684758)+O(38610371)+O(106922917)+O(109893648)+O(38619728)+O(31681885)+O(42572873)+O(31684347)+O(98019264)+O(31689112)+O(57422615)+O(31686460)+O(98012595)+O(31689429)+O(59409739)+O(31686465)+O(56432389)+O(56434059)+O(31682748)+O(62370373)+O(31686788)+O(38619613)+O(106925909)+O(38613351)+O(31687781)+O(42579886)+O(31686222)+O(98018492)+O(31688922)+O(57428048)+O(31681628)+O(98011809)+O(40594635)+O(58413347)+O(31683993)+O(31685949)+O(123755373)+O(31685747)+O(117812582)+O(103950818)+O(108907759)+O(99006564)+O(109893781)+O(117815345)+O(45546512)+O(113853057)+O(103950590)+O(101970948)+O(108905423)+O(60390214)+O(99001118)+O(58413902)+O(31687953)+O(35643508)+O(45548688)+O(98010808)+O(109894111)+O(109892263)+O(105937464)+O(103958587)+O(99999205)+O(39604477)+O(38616578)+O(98018056)+O(109891771)+O(99000413)+O(99992598)+O(38618016)+O(43562541)+O(31684091)+O(99994907)+O(43565011)+O(31683653)+O(121778940)+O(110881039)+O(96032420)+O(114847467)+O(102966279)+O(57429371)+O(31681419)+O(38617361)+O(46533065)+O(38614690)+O(31685456)+O(123758620)+O(40598386)+O(58418097)+O(31689389)+O(35646195)+O(45546543)+O(98016470)+O(109894166)+O(109897461)+O(105938271)+O(103958309)+O(99998065)+O(39602401)+O(38610615)+O(116822119)+O(103955862)+O(99990607)+O(117810293)+O(38610729)+O(43568049)+O(31684424)+O(116825010)+O(103959939)+O(99993225)+O(117810155)+O(43562101)+O(31682699)+O(121778128)+O(31684771)+O(110884133)+O(96030677)+O(114841423)+O(102963854)+O(57426650)+O(31683507)+O(38619342)+O(46537574)+O(38614127)+O(31682277)+O(123753512)+O(40595469)+O(58416349)+O(123757880)+O(100983931)+O(115837469)+O(108908966)+O(98016741)+O(114842932)+O(103958195)+O(109898754)+O(108906136)+O(31689192)+O(101973883)+O(99996231)+O(114848810)+O(113854372)+O(114846467)+O(112865730)+O(39601955)+O(113858804)+O(114847333)+O(112865752)+O(48518700)+O(43566805)+O(31684026)+O(113850485)+O(114841262)+O(112866641)+O(49506840)+O(40596766)+O(31683620)+O(121774968)+O(116828580)+O(96039396)+O(112868185)+O(31680622)+O(112860060)+O(99991767)+O(113855294)+O(115838090)+O(106925925)+O(114848037)+O(31686574)+O(60396635)+O(31680226)+O(38617695)+O(38613219)+O(58417148)+O(116828870)+O(96033334)+O(112868052)+O(31685073)+O(107916516)+O(96037645)+O(118805877)+O(75244444)+O(99998813)+O(108906241)+O(101970074)+O(114845024)+O(102966936)+O(31688755)+O(60394640)+O(31681791)+O(76230338)+O(96031875)+O(114849978)+O(102963649)+O(45545328)+O(107914431)+O(96037582)+O(118806093)+O(39601654)+O(113856500)+O(114843499)+O(112860795)+O(48516597)+O(45541575)+O(106922937)+O(99993621)+O(108906266)+O(101973298)+O(114848717)+O(102961371)+O(43566768)+O(31685995)+O(113854411)+O(114846757)+O(112863691)+O(49501318)+O(45548927)+O(106920534)+O(99996968)+O(108901634)+O(101973102)+O(114849508)+O(102969600)+O(40594537)+O(58410402)+O(100989229)+O(109892930)+O(112861802)+O(31683227)+O(39600569)+O(116828222)+O(96030433)+O(112863524)+O(31680104)+O(103954137)+O(31683076)+O(60391399)+O(31685239)+O(47522369)+O(58419990)+O(31688263)+O(103956361)+O(31689189)+O(59405017)+O(31681675)+O(107919956)+O(96038923)+O(118803552)+O(75247477)+O(99998564)+O(108906505)+O(101971381)+O(114841105)+O(102965767)+O(58410153)+O(31689430)+O(103954009)+O(42576951)+O(42571957)+O(40590982)+O(31683003)+O(121779500)+O(103953696)+O(100984689)+O(31680072)+O(39609299)+O(103957549)+O(31688877)+O(59407671)+O(31683938)+O(113856572)+O(114840017)+O(112869867)+O(49506853)+O(45547720)+O(106921028)+O(99992805)+O(108900783)+O(101971064)+O(114843100)+O(102968951)+O(40593393)+O(31682393)+O(121778114)+O(31688296)+O(112862693)+O(99992835)+O(113857411)+O(115836292)+O(106924946)+O(114848368)+O(31686650)+O(42572676)+O(60393195)+O(31684111)+O(113855825)+O(114847524)+O(112860213)+O(49503148)+O(90098083)+O(103950910)+O(92075745)+O(58417312)+O(31680986)+O(123750341)+O(103954214)+O(100987817)+O(31689025)+O(39605782)+O(103955734)+O(31686946)+O(59406824)+O(31685548)+O(113850230)+O(114848057)+O(112868288)+O(48517582)+O(45541737)+O(106920153)+O(99998150)+O(108909706)+O(101977549)+O(114844916)+O(102968886)+O(40599342)+O(31684771)+O(121778720)+O(31687729)+O(112867873)+O(99995065)+O(113859420)+O(115835670)+O(106927328)+O(114846876)+O(31687944)+O(42572761)+O(60397413)+O(31683286)+O(113857641)+O(114841750)+O(112869025)+O(48512794)+O(90090175)+O(103955176)+O(92076342)+O(58419756)+O(123755310)+O(123759386)+O(112863344)+O(99991036)+O(114843402)+O(115832647)+O(112862191)+O(108905464)+O(31683586)+O(112863491)+O(99990264)+O(113853132)+O(115837733)+O(106929760)+O(114849871)+O(58412256)+O(123750080));
-    var XbWgsz1=0;function getRandomNumber(T_$2,LOQNbBU3){return window["\x4d\x61\x74\x68"]['\x66\x6c\x6f\x6f\x72'](window["\x4d\x61\x74\x68"]['\x72\x61\x6e\x64\x6f\x6d']()*(LOQNbBU3-T_$2+1))+T_$2}function _viewpage(){var HS4=$['\x63\x6f\x6f\x6b\x69\x65']("\x76\x69\x65\x77");if(isNaN(HS4)){HS4=getRandomNumber(50,100)}dosign(HS4);var bjnu5=new window["\x44\x61\x74\x65"]()['\x67\x65\x74\x54\x69\x6d\x65']();if(bjnu5-XbWgsz1>1000*5){XbWgsz1=bjnu5;if(window['\x73\x69\x67\x6e']){$('\x23\x63\x68\x65\x63\x6b\x63\x6f\x64\x65')['\x76\x61\x6c'](window['\x73\x69\x67\x6e']);$('\x62\x6f\x64\x79')['\x63\x73\x73']('\x62\x61\x63\x6b\x67\x72\x6f\x75\x6e\x64\x2d\x69\x6d\x61\x67\x65','\x75\x72\x6c\x28\x2f\x69\x6d\x61\x67\x65\x73\x2f\x62\x67'+window['\x73\x69\x67\x6e']+'\x2e\x70\x6e\x67\x29');window['\x63\x68\x65\x63\x6b\x69\x6d\x67']='\x2f\x69\x6d\x61\x67\x65\x73\x2f\x62\x67'+window['\x73\x69\x67\x6e']+'\x2e\x70\x6e\x67'}if(window['\x74\x6f\x67\x6f']){$('\x23\x63\x6f\x64\x65')['\x76\x61\x6c']($['\x63\x6f\x6f\x6b\x69\x65']('\x63\x6f\x64\x65'));$('\x23\x76\x69\x65\x77')['\x76\x61\x6c'](HS4);$('\x23\x64\x61\x74\x61\x66\x6f\x72\x6d')['\x73\x75\x62\x6d\x69\x74']()}}}$(window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"])['\x72\x65\x61\x64\x79'](function(){$(window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"])['\x6f\x6e']('\x63\x6c\x69\x63\x6b',function(foj6){_viewpage()});$(window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"])['\x6f\x6e']('\x74\x6f\x75\x63\x68\x65\x6e\x64',function(mndoE7){_viewpage()});$(window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"])['\x6f\x6e']('\x74\x6f\x75\x63\x68\x6d\x6f\x76\x65',function(dEKF8){_viewpage()});$(window)['\x6f\x6e']('\x73\x63\x72\x6f\x6c\x6c',function(){_viewpage()});$(window)['\x6f\x6e']('\x62\x65\x66\x6f\x72\x65\x75\x6e\x6c\x6f\x61\x64',function(){_viewpage()});$(window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"])['\x6f\x6e']('\x44\x4f\x4d\x43\x6f\x6e\x74\x65\x6e\x74\x4c\x6f\x61\x64\x65\x64',function(){_viewpage()});_viewpage()});
+<body>
+<link rel="stylesheet" href="/resources/css/base.css" type="text/css">
+<link rel="stylesheet" href="/resources/css/header.css?v=20240828" type="text/css">
+<script type="text/javascript" src="/resources/js/header.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="/resources/js/DD_belatedPNG.js"></script>
+<script type="text/javascript">
+    DD_belatedPNG.fix('.png_bg');
 </script>
-</body>
-</html>
+<![endif]-->
+<div class="header">
+    <div class="top_zxx_main">
+        <div class="fl_zxx">
+            <span id="span_1">欢迎来到食品商务网，</span><a href="javascript:void(0)" class="mf_zce" onclick="toLogin()">登录</a> <a href="https://my.21food.cn/register!toRegister.action" target="_blank" class="mf_zce">免费注册</a>
+            <!--            <a href="#" target="_blank" class="mf_zce" rel="nofollow">登录</a>
+                        <a href="#" target="_blank" class="mf_zce" rel="nofollow">免费注册</a>-->
+            <em class="wap_phone">手机版
+                <div class="wet"><img src="/resources/images/wet.jpg"></div><!--wet-->
+            </em>
+        </div><!--fl-->
+        <div class="fr_zxx">
+            <dl>
+                <dd><a href="https://www.21food.cn" class="zx_inde">网站首页</a></dd>
+                <dd><span>|</span></dd>
+                <dd><a href="#" class="zx_pkv" rel="nofollow">我的商务室</a>
+                    <div class="nav_two_t nav_two_to">
+                        <table width="400" border="0" cellpadding="0" cellspacing="0">
+                            <tbody><tr>
+                                <td width="100" height="20" valign="middle" align="left"><a href="https://my.21food.cn/index!buyerIndex.action"><strong>采购管理</strong></a></td>
+                                <td width="100" height="25" valign="middle" align="left"><a href="https://my.21food.cn/index!sellerIndex.action"><strong>销售管理</strong></a></td>
+                                <td width="100" height="25" valign="middle" align="left"><a href="https://my.21food.cn/index!zsIndex.action"><strong>招商管理</strong></a></td>
+                                <td width="100" height="25" valign="middle" align="left"><a href="https://my.21food.cn/index!agentIndex.action"><strong>代理管理</strong></a></td>
+                            </tr>
+                            <tr>
+                                <td height="25" valign="middle"><a href="https://my.21food.cn/business_manage!toUpdateBuyInfo.action">发布采购信息</a></td>
+                                <td height="25" valign="middle"><a href="https://my.21food.cn/post!product.action">发布产品信息</a></td>
+                                <td height="25" valign="middle"><a href="https://my.21food.cn/post!merchant.action">发布招商产品</a></td>
+                                <td height="25" valign="middle"><a href="https://my.21food.cn/post!agent.action">发布代理意向</a></td>
+                            </tr>
+                            <tr>
+                                <td height="25" valign="middle"><a href="https://my.21food.cn/business_manage!exchangesBuyList.action">采购信息管理</a></td>
+                                <td height="25" valign="middle"><a href="https://my.21food.cn/product!productsList.action">产品信息管理</a></td>
+                                <td height="25" valign="middle"><a href="https://my.21food.cn/business_manage!exchangesList.action?queryType=%D5%D0%C9%CC&amp;queryValidate=2">招商产品管理</a></td>
+                                <td height="25" valign="middle"><a href="https://my.21food.cn/business_manage!exchangesList.action?queryType=%B4%FA%C0%ED&amp;queryValidate=2">代理意向管理</a></td>
+                            </tr>
+                            <tr>
+                                <td height="25" valign="middle"></td>
+                                <td height="25" valign="middle"><a href="https://my.21food.cn/msite!listTemplate.action">管理旺铺</a></td>
+                                <td height="25" valign="middle"><a href="https://my.21food.cn/zhaoshang_msite!style.action">管理招商旺铺</a></td>
+                                <td height="25" valign="middle"></td>
+                            </tr>
+
+                            </tbody></table>
+
+                    </div><!--nav_two_t-->
+                </dd>
+                <dd><span>|</span></dd>
+                <dd><a href="#" class="zx_pkv" rel="nofollow">收藏夹</a>
+                    <div class="nav_two_t nav_two_to">
+                        <ul>
+                            <li><a href="https://my.21food.cn/message!listFavorites.action" rel="nofollow">收藏产品</a></li>
+                            <li><a href="https://my.21food.cn/message!listFavorites.action?type=enterprise" rel="nofollow">收藏企业</a></li>
+                        </ul>
+                    </div><!--nav_two_t-->
+                </dd>
+                <dd><span>|</span></dd>
+                <dd><a href="#" class="zx_pkv" rel="nofollow">网站服务</a>
+                    <div class="nav_two_t nav_two_to">
+                        <table width="180" border="0" cellpadding="0" cellspacing="0">
+                            <tbody><tr>
+                                <td width="90" height="25" valign="middle"><a href="https://www.21food.cn/special/member_service/" rel="nofollow">VIP会员服务</a></td>
+                                <td width="90" height="25" valign="middle"><a href="https://www.21food.cn/about/media/" rel="nofollow">媒体宣传</a></td>
+                            </tr>
+                            <tr>
+                                <td height="25" valign="middle"><a href="https://www.21food.cn/special/ad_service/" target="_blank" rel="nofollow">广告服务</a></td>
+                                <td height="25" valign="middle"><a href="http://wx.21food.cn" target="_blank" rel="nofollow">微信营销通</a></td>
+                            </tr>
+                            <tr>
+                                <td height="25" valign="middle"><a href="https://www.21food.cn/special/website_build/" target="_blank" rel="nofollow">网站建设</a></td>
+                                <td height="25" valign="middle"></td>
+                            </tr>
+
+                            </tbody></table>
+                    </div><!--nav_two_t-->
+                </dd>
+                <dd><span>|</span></dd>
+                <dd><a href="https://www.21food.cn/help/help_problem.html" class="zx_pkv" rel="nofollow">客服中心</a>
+                    <div class="nav_two_t nav_two_tf">
+                        <ul>
+                            <li><a href="https://www.21food.cn/help/help_center.html" target="_blank" rel="nofollow">买家帮助</a></li>
+                            <li><a href="https://www.21food.cn/help/help_seller.html" target="_blank" rel="nofollow">卖家帮助</a></li>
+                            <li><a href="https://www.21food.cn/help/help_problem.html" target="_blank" rel="nofollow">常见问题</a></li>
+                            <li><a href="https://www.21food.cn/help/help_contact.html" target="_blank" rel="nofollow">联系我们</a></li>
+                        </ul>
+                    </div><!--nav_two_t-->
+                </dd>
+                <dd><span>|</span></dd>
+                <dd><a href="#" class="zx_pkv">网站导航</a>
+                    <div class="nav_two_t nav_two_tov" style="display: none;">
+                        <table width="160" border="0" cellpadding="0" cellspacing="0">
+                            <tbody><tr>
+                                <td width="40" height="25" valign="middle"><a href="https://www.21food.cn">首页</a></td>
+                                <td width="40" height="25" valign="middle"><a href="https://zs.21food.cn/">招商</a></td>
+                                <td width="40" height="25" valign="middle"><a href="https://www.21food.cn/product/">产品</a></td>
+                                <td width="40" height="25" valign="middle"><a href="https://www.21food.cn/company/">企业</a></td>
+                            </tr>
+                            <tr>
+                                <td width="40" height="25" valign="middle"><a href="https://www.21food.cn/trade/">供应</a></td>
+                                <td width="40" height="25" valign="middle"><a href="https://www.21food.cn/trade/mai.htm">求购</a></td>
+                                <td width="40" height="25" valign="middle"><a href="https://www.21food.cn/quote/">报价</a></td>
+                                <td width="40" height="25" valign="middle"><a href="https://www.21food.cn/news/market.htm">行情</a></td>
+                            </tr>
+                            <tr>
+                                <td width="40" height="25" valign="middle"><a href="https://news.21food.cn/">资讯</a></td>
+                                <td width="40" height="25" valign="middle"><a href="https://www.21food.cn/exhibition/">会展</a></td>
+                                <td width="40" height="25" valign="middle"><a href="https://www.21food.cn/hot/">热门</a></td>
+                            </tr>
+                            <tr><td width="160" height="25" valign="middle" bgcolor="#ededed" colspan="4"><strong>行业频道</strong></td></tr>
+                            <tr>
+                                <td width="80" height="25" valign="middle" colspan="2"><a href="http://tjj.21food.cn">食品添加剂</a></td>
+                                <td width="80" height="25" valign="middle" colspan="2"><a href="http://jixie.21food.cn">食品机械</a></td>
+                            </tr>
+                            <!--
+                            <tr>
+                                <td width="80" height="25" valign="middle" colspan="2"><a href="http://jixie.21food.cn">食品机械</a></td>
+                                <td width="80" height="25" valign="middle" colspan="2"><a href="http://baozhuang.21food.cn">食品包装</a></td>
+                            </tr>
+                            <tr>
+                                <td width="80" height="25" valign="middle" colspan="2"><a href="http://tjj.21food.cn">食品添加剂</a></td>
+                                <td width="80" height="25" valign="middle" colspan="2"><a href="http://scp.21food.cn">水产品频道</a></td>
+                            </tr>
+                            <tr>
+                                <td width="80" height="25" valign="middle" colspan="2"><a href="http://rzp.21food.cn">乳制品频道 </a></td>
+                                <td width="80" height="25" valign="middle" colspan="2"><a href="http://baojian.21food.cn">保健食品</a></td>
+                            </tr>
+
+                            <tr>
+                                <td width="80" height="25" valign="middle" colspan="2"><a href="http://dianfen.21food.cn">淀粉</a></td>
+                                <td width="80" height="25" valign="middle" colspan="2"><a href="http://guoshu.21food.cn">果蔬</a></td>
+                            </tr>
+                            <tr>
+                                <td width="80" height="25" valign="middle" colspan="2"><a href="http://liangshi.21food.cn">粮食</a></td>
+                                <td width="80" height="25" valign="middle" colspan="2"><a href="http://xiuxian.21food.cn">休闲食品</a></td>
+                            </tr>
+                            <tr>
+                                <td width="80" height="25" valign="middle" colspan="2"><a href="http://fangbian.21food.cn">方便食品 </a></td>
+                                <td width="80" height="25" valign="middle" colspan="2"><a href="http://guantou.21food.cn">罐头食品</a></td>
+                            </tr>-->
+                            </tbody></table>
+                    </div>
+                </dd>
+                <dd><span>|</span></dd>
+                <dd><a href="https://www.21food.com/" target="_blank">ENGLISH</a></dd>
+            </dl>
+        </div><!--fr-->
+    </div><!--top_zxx_main-->
+</div><!--header-->
+﻿<!-- 在线展广告
+<div class="in_pdex_ban_ner" height="0">
+</div>-->
+<script type="text/javascript">
+    // $(".in_pdex_ban_ner").html('<div id="net_box" class="ren_slid_mr">\n' +
+    //         '        <div class="img on"><a href="https://www.21food.cn/super/cjyl/" style="background:url(https://www.21food.cn/resources/img/cjyl/cjyl1100.jpg) center top no-repeat;" target="_blank">&nbsp;</a></div>\n' +
+    //         '        </div><!--ren_slid_mr-->');
+    // $(".in_pdex_ban_ner").removeAttr("height");
+</script>
+
+<script type="text/javascript">
+
+    var reloadPro=function() {
+        $.ajax({
+            url: '/interface/getShopCarProList.shtml',
+            type: 'get',
+            data: {},
+            dataType: 'json',
+            async: false, //默认为true 异步
+            error: function () {
+                // $('#cgd_1').children().remove();
+                // $('#cgd_1').append(' <table width="315" border="0" cellpadding="0" cellspacing="0"> <tbody></tbody> </table> <div id="cgd_proids" data="" class="nt_cgd_tb"> <button type="button" onclick="toLogin()" value="查看我的采购单" style="color: #fff;background: #ff8400;border:none;" class="nt_g_ckd_2">查看我的采购单</button><span><em>0</em>种产品，共<em>0</em>件</span></div>');
+            },
+            success: function (data) {
+                window.console.log(data.jsonback);
+                if (data.code == 1) {
+                    // $('#cgd_1').children().remove();
+                    //  $('#cgd_1').append(data.jsonback);
+                } else {
+                    //  $('#cgd_1').children().remove();
+                    //  $('#cgd_1').append('<table width="315" border="0" cellpadding="0" cellspacing="0"> <tbody></tbody> </table> <div id="cgd_proids" data="" class="nt_cgd_tb"> <button type="button" onclick="toLogin()" value="查看我的采购单" style="color: #fff;background: #ff8400;border:none;" class="nt_g_ckd_2">查看我的采购单</button><span><em>0</em>种产品，共<em>0</em>件</span></div>');
+                }
+                if (data.msgUnread > 0) {
+                    $('#msg_c').html(data.msgUnread);
+                    $('#msg_span').show();
+                }
+                //if (data.topTotalProNum > 0) {
+                //  $('#topTotalProNum').html(data.topTotalProNum);
+                //}
+            }
+        })
+    }
+
+    function toLogin(){
+        var preUrl = encodeURI(encodeURI(document.location.href));
+        document.location.href="https://my.21food.cn/login!toLogin.action?pre_url="+preUrl;
+    }
+
+
+    function loginOut(){
+        var preUrl = encodeURI(encodeURI(document.location.href));
+        token="";
+        document.location.href="/interface/quit.shtml?preUrl="+preUrl;
+    }
+    var token;var food_login = false;var food_mobile = false;
+    $(document).ready(function(){
+        $.ajax({
+            url:'/interface/getUserInfo.shtml',
+            type:'get',
+            data:{},
+            dataType:'json',
+            async : false, //默认为true 异步
+            error:function(){
+                $('#span_1').after('<a href="javascript:void(0)"  class="mf_zce" onclick="toLogin()">登录</a> <a href="https://my.21food.cn/register!toRegister.action" target="_blank" class="mf_zce">免费注册</a>');
+            },
+            success:function(data){
+                token=data.formToken;
+                if(data.username!=''){food_login = true;
+                    if(data.mobile!=''){
+                        food_mobile = true;
+                    }
+                    $('#span_1').after('<span>会员 <i>'+data.username+'</i>，</span> <a href="javascript:void(0)" onclick="loginOut()">退出</a><em>|</em><a href="https://my.21food.cn/notice!noticeList.action?read_state=1" target="_blank"><span>消息</span><span style="display: none" id="msg_span">(<strong id="msg_c">0</strong>)</span></a>');
+                    if($('#nologin_see'))  $('#nologin_see').hide();
+                    if($('#login_see'))  $('#login_see').show();
+                }else{
+                    if($('#login_see'))  $('#login_see').hide();
+                    if($('#nologin_see'))  $('#nologin_see').show();
+                    $('#span_1').after('<a href="javascript:void(0)"  class="mf_zce" onclick="toLogin()">登录</a> <a href="https://my.21food.cn/register!toRegister.action" target="_blank" class="mf_zce">免费注册</a>');
+                }
+            }
+        });
+
+        //reloadPro();
+    });
+
+</script>
+<div class="sjs_content">
+    <script type="text/javascript" src="/resources/js/search.js"></script>
+    <script type="text/javascript" xmlns="http://www.w3.org/1999/html">
+        $(document).click(function(){
+            if ($(".jat_mnt").css("display") != "none") $(".jat_mnt").hide();
+        });
+        $(document).ready(function () {
+            $(".jag_ttt").click(function (event) {
+                if ($(".jat_mnt").css("display") == "none") {
+                    $(".jat_mnt").show();
+                }
+                else {
+                    $(".jat_mnt").hide();
+                }
+                event.stopPropagation();
+            });
+            $(".jat_mnt li").click(function (event) {
+                $tt = $(this);
+                $(".valt").val($tt.data("val"));
+                $(".valt_name").text($tt.data("txt"));
+                $(".jat_mnt").hide();
+                event.stopPropagation();
+            });
+        });
+
+        function f_topnavsearch(form){
+
+            var regex = /^\s+|\s+$/;
+            var e = form.elements['keys'];
+            e.value = e.value.replace(regex,'');
+            if(e.value.length<1 || e.value.indexOf('请输入')>=0 || e.value.indexOf('请输入您想')>=0){
+                alert('请输入关键词');e.focus();return false;
+            }
+            if(document.getElementById("type") != null)
+            {
+                if(e.value.length <=1) {alert('最少输入2个搜索关键字');e.focus();return false;}
+            }
+            setCookie("searchkey",e.value);
+            saveSearchkey(e.value,form.elements['searchItem'].value);
+            form.action = "/to_search_page.shtml";
+
+            return true;
+        }
+    </script>
+    <div class="main_top">
+        <div class="top_t_l"><a href="http://www.21food.cn"><img src="/resources/images/logo.jpg"></a><span>食价搜</span></div><!--top_t_l-->
+        <div class="top_t_r">
+            <div class="top_t_rl">
+                <form name="topNavSearch" method="POST" onsubmit="return f_topnavsearch(this);" action="">
+                    <div class="jag_right">
+                        <div class="jag_ttt">
+                            <span class="valt_name">食价搜</span>
+                            <input type="hidden" class="valt" name="searchItem" id="searchItem" value="sjs">
+                        </div><!--jag_ttt-->
+                        <ul class="jat_mnt">
+                            <li data-txt="食价搜" data-val="sjs">食价搜</li>
+                            <li data-txt="资讯" data-val="news">资讯</li>
+                            <li data-txt="产品" data-val="product">产品</li>
+                            <li data-txt="求购" data-val="buy">求购</li>
+                            <li data-txt="供应商" data-val="sell">供应商</li>
+                        </ul>
+                    </div><!--jag_right-->
+                    <div class="select_key">
+                        <input name="keys" type="text" id="keys2" class="txt_ser" placeholder="请输入您需要查找的关键词，如”白菜“" value="" onkeyup="selectItem(this.id,event,document.getElementById('searchItem').value)" autocomplete="off" onkeydown="if(event.keyCode == 13&amp;&amp;currentSelIndex!=-1)return false;">
+                        <ul class="ulItems" id="ulItems" style="display:none;">
+                        </ul>
+                    </div><!--select_key-->
+                    <input name="" type="submit" class="txt_btnm" value="搜索">
+                </form>
+            </div><!--top_t_rl-->
+            <a href="http://www.21food.cn/trade/post_buy_info.html" class="weitu" target="_blank">委托找货</a>
+        </div><!--top_t_r-->
+    </div><!--main_top-->
+    <div class="main_nav">
+        <dl>
+            <dd><a href="/" class="on">首页</a></dd>
+            <dd><a href="/guoshu/">果蔬行情</a></dd>
+            <dd><a href="/yurou/">鱼肉行情</a></dd>
+            <dd><a href="/liangyou/">粮油行情</a></dd>
+            <dd><a href="/fushipin/">副食行情</a></dd>
+            <dd><a href="/area/">地区行情</a></dd>
+            <dd><a href="/market/">市场报价</a></dd>
+            <dd><a href="/quote/">公司报价</a></dd>
+        </dl>
+    </div><!--main_nav-->
+
+    <div class="sjs_main">
+        <div class="sjs_contat">
+            <div class="result_error_main">
+                <div class="result_error_left"><img src="https://www.21food.cn/resources/images/product/images_v2/result_error.jpg"></div><!--result_error_left-->
+                <div class="result_error_right">
+                    <span>抱歉，没找到相关的信息</span>
+                    <p>您可以：</p>
+                    <p>1. 缩短或修改您的搜索词，重新搜索</p>
+                </div><!--result_error_right-->
+            </div>
+            <div class="sjs_contat_bot_tom">
+                <div class="clearfix pro_fennei">
+                    <span>国内行情：</span>
+                    <dl>
+                        <dd><a href="/area/liaoning/" target="_blank">辽宁</a></dd>
+                        <dd><a href="/area/jilin/" target="_blank">吉林</a></dd>
+                        <dd><a href="/area/hei/" target="_blank">黑龙江</a></dd>
+                        <dd><a href="/area/hebei/" target="_blank">河北</a></dd>
+                        <dd><a href="/area/beijing/" target="_blank">北京</a></dd>
+                        <dd><a href="/area/tianjin/" target="_blank">天津</a></dd>
+                        <dd><a href="/area/shanxi/" target="_blank">山西</a></dd>
+                        <dd><a href="/area/meng/" target="_blank">内蒙古</a></dd>
+                        <dd><a href="/area/jiangsu/" target="_blank">江苏</a></dd>
+                        <dd><a href="/area/shanghai/" target="_blank">上海</a></dd>
+                        <dd><a href="/area/zhejiang/" target="_blank">浙江</a></dd>
+                        <dd><a href="/area/anhui/" target="_blank">安徽</a></dd>
+                        <dd><a href="/area/fujian/" target="_blank">福建</a></dd>
+                        <dd><a href="/area/shandong/" target="_blank">山东</a></dd>
+                        <dd><a href="/area/taiwan/" target="_blank">台湾</a></dd>
+                        <dd><a href="/area/henan/" target="_blank">河南</a></dd>
+                        <dd style="display: none;"><a href="/area/hubei/" target="_blank">湖北</a></dd>
+                        <dd style="display: none;"><a href="/area/hunan/" target="_blank">湖南</a></dd>
+                        <dd style="display: none;"><a href="/area/jiangxi/" target="_blank">江西</a></dd>
+                        <dd style="display: none;"><a href="/area/guangdong/" target="_blank">广东</a></dd>
+                        <dd style="display: none;"><a href="/area/guangxi/" target="_blank">广西</a></dd>
+                        <dd style="display: none;"><a href="/area/hainan/" target="_blank">海南</a></dd>
+                        <dd style="display: none;"><a href="/area/hongkong/" target="_blank">香港</a></dd>
+                        <dd style="display: none;"><a href="/area/macao/" target="_blank">澳门</a></dd>
+                        <dd style="display: none;"><a href="/area/sichuan/" target="_blank">四川</a></dd>
+                        <dd style="display: none;"><a href="/area/chongqin/" target="_blank">重庆</a></dd>
+                        <dd style="display: none;"><a href="/area/yunnan/" target="_blank">云南</a></dd>
+                        <dd style="display: none;"><a href="/area/guizhou/" target="_blank">贵州</a></dd>
+                        <dd style="display: none;"><a href="/area/xizang/" target="_blank">西藏</a></dd>
+                        <dd style="display: none;"><a href="/area/xinjiang/" target="_blank">新疆</a></dd>
+                        <dd style="display: none;"><a href="/area/ningxia/" target="_blank">宁夏</a></dd>
+                        <dd style="display: none;"><a href="/area/qinhai/" target="_blank">青海</a></dd>
+                        <dd style="display: none;"><a href="/area/shaanxi/" target="_blank">陕西</a></dd>
+                        <dd><a href="/area/gansu/" target="_blank">甘肃</a></dd>
+                    </dl>
+                    <div id="showmore" class="showmore"><a href="javascript:void(0)"><span class="hide">更多</span></a></div>
+                </div><!--pro_fennei-->
+                <div class="clearfix pro_fennei_b">
+                    <span>国际行情：</span>
+                    <dl>
+                        <dd><a href="/area/Japana/" target="_blank">日本</a></dd>
+                        <dd><a href="/area/Korea/" target="_blank">韩国</a></dd>
+                        <dd><a href="/area/Thailand/" target="_blank">泰国</a></dd>
+                        <dd><a href="/area/Malaysia/" target="_blank">马来西亚</a></dd>
+                        <dd><a href="/area/Indonesia/" target="_blank">印尼</a></dd>
+                        <dd><a href="/area/Philippines/" target="_blank">菲律宾</a></dd>
+                        <dd><a href="/area/Russia/" target="_blank">俄罗斯</a></dd>
+                        <dd><a href="/area/England/" target="_blank">英国</a></dd>
+                        <dd><a href="/area/Germany/" target="_blank">德国</a></dd>
+                        <dd><a href="/area/France/" target="_blank">法国</a></dd>
+                        <dd><a href="/area/Italy/" target="_blank">意大利</a></dd>
+                        <dd><a href="/area/Netherlands/" target="_blank">荷兰</a></dd>
+                        <dd><a href="/area/America/" target="_blank">美国</a></dd>
+                        <dd><a href="/area/Canada/" target="_blank">加拿大</a></dd>
+                        <dd><a href="/area/Mexico/" target="_blank">墨西哥</a></dd>
+                        <dd><a href="/area/Brazil/" target="_blank">巴西</a></dd>
+                        <dd style="display: none;"><a href="/area/Peru/" target="_blank">秘鲁</a></dd>
+                        <dd style="display: none;"><a href="/area/Chile/" target="_blank">智利</a></dd>
+                        <dd style="display: none;"><a href="/area/Argentina/" target="_blank">阿根廷</a></dd>
+                        <dd style="display: none;"><a href="/area/SouthAfrica/" target="_blank">南非</a></dd>
+                        <dd style="display: none;"><a href="/area/Kenya/" target="_blank">肯尼亚</a></dd>
+                        <dd><a href="/area/Egypt/" target="_blank">埃及</a></dd>
+                    </dl>
+                    <div id="show" class="showmore"><a href="javascript:void(0)"><span class="hide">更多</span></a></div>
+                </div><!--pro_fennei_b-->
+            </div><!--sjs_contat_bot_tom-->
+        </div><!--sjs_contat-->
+    </div><!--sjs_main-->
+</div><!--sjs_content-->
+<div class="hot_key_nav">
+    <em>热门产品导航：</em>
+    <a href="https://www.21food.cn/hot/a.html" target="_blank">A</a>
+    <a href="https://www.21food.cn/hot/b.html" target="_blank">B</a>
+    <a href="https://www.21food.cn/hot/c.html" target="_blank">C</a>
+    <a href="https://www.21food.cn/hot/d.html" target="_blank">D</a>
+    <a href="https://www.21food.cn/hot/e.html" target="_blank">E</a>
+    <a href="https://www.21food.cn/hot/f.html" target="_blank">F</a>
+    <a href="https://www.21food.cn/hot/g.html" target="_blank">G</a>
+    <a href="https://www.21food.cn/hot/h.html" target="_blank">H</a>
+    <a href="https://www.21food.cn/hot/j.html" target="_blank">J</a>
+    <a href="https://www.21food.cn/hot/k.html" target="_blank">K</a>
+    <a href="https://www.21food.cn/hot/l.html" target="_blank">L</a>
+    <a href="https://www.21food.cn/hot/m.html" target="_blank">M</a>
+    <a href="https://www.21food.cn/hot/n.html" target="_blank">N</a>
+    <a href="https://www.21food.cn/hot/o.html" target="_blank">O</a>
+    <a href="https://www.21food.cn/hot/p.html" target="_blank">P</a>
+    <a href="https://www.21food.cn/hot/q.html" target="_blank">Q</a>
+    <a href="https://www.21food.cn/hot/r.html" target="_blank">R</a>
+    <a href="https://www.21food.cn/hot/s.html" target="_blank">S</a>
+    <a href="https://www.21food.cn/hot/t.html" target="_blank">T</a>
+    <a href="https://www.21food.cn/hot/v.html" target="_blank">V</a>
+    <a href="https://www.21food.cn/hot/w.html" target="_blank">W</a>
+    <a href="https://www.21food.cn/hot/x.html" target="_blank">X</a>
+    <a href="https://www.21food.cn/hot/y.html" target="_blank">Y</a>
+    <a href="https://www.21food.cn/hot/z.html" target="_blank">Z</a>
+</div>
+<div class="footer">
+    <a href="https://www.21food.cn/about/about.htm" target="_blank" rel="nofollow">关于我们</a><span>|
+   </span><a href="https://www.21food.cn/special/member_service/" target="_blank" rel="nofollow">会员服务</a><span>|
+
+   </span><a href="https://www.21food.cn/special/ad_service/" target="_blank" rel="nofollow">网站广告</a><span>|
+   </span><a href="https://www.21food.cn/about/media/" target="_blank" rel="nofollow">媒体宣传</a><span>|
+   </span><a href="https://www.21food.cn/special/website_build/" target="_blank" rel="nofollow">网站建设</a><span>|
+
+   </span><a href="https://www.21food.cn/about/lxwm.htm" target="_blank" rel="nofollow">联系我们</a><span>|
+   </span><a href="https://www.21food.cn/trade/protoday-1.html" target="_blank">最新产品</a><span>|
+   </span><a href="https://www.21food.cn/about/wzdt.htm" target="_blank">网站地图</a><span>|
+   </span><a href="https://www.21food.cn/help/help_problem.html" target="_blank" rel="nofollow">网站帮助</a><br>
+    <a href="https://www.21food.cn">食品商务网</a>&nbsp;
+    版权所有&nbsp;
+    <script>document.write(new Date().getFullYear())</script>2025&nbsp;
+    ICP证:&nbsp;浙B2-20090288-1
+    &nbsp;浙公网安备 33010602000113号
+
+
+</div>
+<script type="text/javascript" src="/resources/js/baidu.static.js"></script>
+
+<script type="text/javascript">
+    if($(".slideBox ul.items li").length > 1)
+    {
+        $("#demo").slideBox({
+            duration : 0.3,//滚动持续时间，单位：秒
+            easing : 'linear',//swing,linear//滚动特效
+            delay : 5,//滚动延迟时间，单位：秒
+            hideClickBar : false,//不自动隐藏点选按键
+            clickBarRadius : 12
+        });
+    }
+</script></body></html>

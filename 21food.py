@@ -1,6 +1,9 @@
 # -*- codeing = utf-8 -*-
+from http.client import responses
+from playwright.sync_api import sync_playwright
 from selenium import webdriver
 from bs4 import BeautifulSoup  # 网页解析，获取数据
+import requests  # 网页请求
 import re  # 正则表达式，进行文字匹配`
 import urllib.request, urllib.error  # 制定URL，获取网页数据
 import xlwt  # 进行excel操作
@@ -14,8 +17,24 @@ findJudge = re.compile(r'<span>(\d*)人评价</span>')
 findInq = re.compile(r'<span class="inq">(.*)</span>')
 findBd = re.compile(r'<p class="">(.*?)</p>', re.S)
 
-
-
+def testGetUrl():
+    baseurl = "https://price.21food.cn/market-p2.html"  #要爬取的网页链接
+    head = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
+    }
+    response = requests.get(baseurl,headers=head)
+    text = response.text
+    print(text)
+    # browser = p.chromium.launch(headless=True)  # 设置 headless=False 可以显示浏览器窗口
+    # page = browser.new_page()
+    # page.goto("https://example.com")
+    #
+    # # 等待动态内容加载
+    # page.wait_for_selector(".data-class")  # 替换为实际的选择器
+    #
+    # # 提取数据
+    # data = page.eval_on_selector_all(".data-class", "elements => elements.map(e => e.textContent)")
+    # print(data)
 
 def main():
     baseurl = "https://price.21food.cn/market-p2.html"  #要爬取的网页链接
@@ -36,7 +55,7 @@ def getData(baseurl):
 
     # 启动无头浏览器
     options = webdriver.ChromeOptions()
-    options.add_argument('--headless')  # 无头模式
+    # options.add_argument('--headless')  # 无头模式
     driver = webdriver.Chrome(options=options)
 
     # 打开目标网页
@@ -170,8 +189,9 @@ def saveData(datalist,savepath):
 
 
 if __name__ == "__main__":  # 当程序执行时
+    testGetUrl()
     # 调用函数
-    main()
+    # main()
     # init_db("movietest.db")
     print("爬取完毕！")
 
