@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 from playwright_stealth import stealth_sync
+
+
 def main():
     with sync_playwright() as p:
         # 1. 启动浏览器（可以选择无头模式或非无头模式）
