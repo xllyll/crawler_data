@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+
+
+
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        <html xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+        <title>解除屏蔽</title>
+    <link rel="stylesheet" href="https://www.21food.cn/style/2016/base.css" type="text/css">
+    <link rel="stylesheet" href="https://www.21food.cn/style/2016/header.css" type="text/css">
+    <link rel="stylesheet" href="https://www.21food.cn/style/2016/footer.css" type="text/css">
+    <link rel="stylesheet" href="https://www.21food.cn/style/2016/menu.css" type="text/css">
+    <link href="https://www.21food.cn/resources/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://www.21food.cn/resources/css/layout.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://www.21food.cn/script/2016/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://www.21food.cn/script/2016/header.js"></script>
+    <!--[if IE 6]>
+    <script type="text/javascript" src="/resources/js/DD_belatedPNG.js"></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix('.png_bg');
+    </script>
+    <![endif]-->
+
+    <script>
+        $(document).click(function(){
+            if ($(".jat_mnt").css("display") != "none") $(".jat_mnt").hide();
+        });
+        $(document).ready(function () {
+            $(".jag_ttt").click(function (event) {
+                if ($(".jat_mnt").css("display") == "none") {
+                    $(".jat_mnt").show();
+                }
+                else {
+                    $(".jat_mnt").hide();
+                }
+                event.stopPropagation();
+            });
+            $(".jat_mnt li").click(function (event) {
+                $tt = $(this);
+                $(".valt").val($tt.data("val"));
+                $(".valt_name").text($tt.data("txt"));
+                $(".jat_mnt").hide();
+                event.stopPropagation();
+            });
+        });
+
+        function check(){
+            var y=document.getElementById("yzm").value;
+            if(!y||y==''){
+                alert("请输入验证码");
+                return false;
+            }
+            return true;
+        }
+
+
+        function comment_changeVaidatImage(_img){
+            _img.src='/manage/ValidateCode.do?t=' + Math.floor(Math.random()*100);
+        }
+
+
+    </script>
+</head>
+<body>
+<div class="header">
+
+
+
+
+
+
+    <script type="text/javascript" src="https://www.21food.cn/resources/js/header/tradeonline-js-ajax_tradeonline-js-topV2_script-2016-header_ipfilter-jquery.cookie_.js"></script>
+
+    <link href="https://www.21food.cn/resources/css/header/style-2016-base_style-2016-header_.css" rel="stylesheet" type="text/css" />
+
+
+
+    <div class="top_zxx_main">
+        <div class="fl_zxx">
+            <span>欢迎来到食品商务网，</span>
+
+
+            <a href="javascript:void(0)"  class="mf_zce" onclick="toLogin()" rel="nofollow">登录</a>
+            <a href="http://my.21food.cn/register!toRegister.action" target="_blank" class="mf_zce" rel="nofollow">免费注册</a>
+
+
+
+
+
+        </div><!--fl-->
+
+
+
+
+        <div class="fr_zxx">
+            <dl id="topMenu">
+                <dd><a href="https://www.21food.cn" class="zx_inde">网站首页</a></dd>
+                <dd><span>|</span></dd>
+                <dd><a href="javascript:void(0);" class="zx_pkv" rel="nofollow">我的商务室</a>
+                    <div class="nav_two_t nav_two_to">
+                        <table width="270" border="0" cellpadding="0" cellspacing="0">
+                            <tbody><tr>
+                                <td width="100" height="20" valign="middle" align="left"><a href="https://my.21food.cn/index!buyerIndex.action"><strong>采购管理</strong></a></td>
+                                <td width="100" height="25" valign="middle" align="left"><a href="https://my.21food.cn/index!sellerIndex.action"><strong>销售管理</strong></a></td>
+                                <td width="100" height="25" valign="middle" align="left"><a href="https://my.21food.cn/index!zsIndex.action"><strong>招商管理</strong></a></td>
+                                <td width="100" height="25" valign="middle" align="left"><a href="https://my.21food.cn/index!agentIndex.action"><strong>代理管理</strong></a></td>
+                            </tr>
+                            <tr>
+                                <td height="25" valign="middle"><a href="https://my.21food.cn/business_manage!toUpdateBuyInfo.action">发布采购信息</a></td>
+                                <td height="25" valign="middle"><a href="https://my.21food.cn/post!product.action">发布产品信息</a></td>
+                                <td height="25" valign="middle"><a href="https://my.21food.cn/post!merchant.action">发布招商产品</a></td>
+                                <td height="25" valign="middle"><a href="https://my.21food.cn/post!agent.action">发布代理意向</a></td>
+                            </tr>
+                            <tr>
+                                <td height="25" valign="middle"><a href="https://my.21food.cn/business_manage!exchangesBuyList.action">采购信息管理</a></td>
+                                <td height="25" valign="middle"><a href="https://my.21food.cn/product!productsList.action">产品信息管理</a></td>
+                                <td height="25" valign="middle"><a href="https://my.21food.cn/business_manage!exchangesList.action?queryType=%D5%D0%C9%CC&amp;queryValidate=2">招商产品管理</a></td>
+                                <td height="25" valign="middle"><a href="https://my.21food.cn/business_manage!exchangesList.action?queryType=%B4%FA%C0%ED&amp;queryValidate=2">代理意向管理</a></td>
+                            </tr>
+                            <tr>
+                                <td height="25" valign="middle"></td>
+                                <td height="25" valign="middle"><a href="https://my.21food.cn/msite!listTemplate.action">管理旺铺</a></td>
+                                <td height="25" valign="middle"><a href="https://my.21food.cn/zhaoshang_msite!style.action">管理招商旺铺</a></td>
+                                <td height="25" valign="middle"></td>
+                            </tr>
+
+                            </tbody></table>
+                    </div><!--nav_two_t-->
+                </dd>
+                <dd><span>|</span></dd>
+                <dd><a href="#" class="zx_pkv">收藏夹</a>
+                    <div class="nav_two_t nav_two_to">
+                        <ul>
+                            <li><a href="http://my.21food.cn/message!listFavorites.action" rel="nofollow" >收藏产品</a></li>
+                            <li><a href="http://my.21food.cn/message!listFavorites.action?type=enterprise" rel="nofollow">收藏企业</a></li>
+                        </ul>
+                    </div><!--nav_two_t-->
+                </dd>
+                <dd><span>|</span></dd>
+                <dd><a href="javascript:void(0);" class="zx_pkv">网站服务</a>
+                    <div class="nav_two_t nav_two_to">
+                        <table width="180" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td width="90" height="25" valign="middle"><a href="https://www.21food.cn/special/member_service/" rel="nofollow">VIP会员服务</a></td>
+                                <td width="90" height="25" valign="middle"><a href="https://www.21food.cn/about/media/" rel="nofollow">媒体宣传</a></td>
+                            </tr>
+                            <tr>
+                                <td height="20" valign="middle"><a href="https://www.21food.cn/special/ad_service/" target="_blank" rel="nofollow">广告服务</a></td>
+                                <td height="20" valign="middle"><a href="http://wx.21food.cn" target="_blank" rel="nofollow">微信营销通</a></td>
+                            </tr>
+                            <tr>
+                                <td height="20" valign="middle"><a href="https://www.21food.cn/special/website_build/" target="_blank" rel="nofollow">网站建设</a></td>
+                                <td height="20" valign="middle"></td>
+                            </tr>
+
+                        </table>
+                    </div><!--nav_two_t-->
+                </dd>
+                <dd><span>|</span></dd>
+                <dd><a href="https://www.21food.cn/help/help_problem.html" class="zx_pkv">客服中心</a>
+                    <div class="nav_two_t nav_two_tf">
+                        <ul>
+                            <li><a href="https://www.21food.cn/help/help_center.html" target="_blank" rel="nofollow">买家帮助</a></li>
+                            <li><a href="https://www.21food.cn/help/help_seller.html" target="_blank" rel="nofollow">卖家帮助</a></li>
+                            <li><a href="https://www.21food.cn/help/help_problem.html" target="_blank" rel="nofollow">常见问题</a></li>
+                            <li><a href="https://www.21food.cn/about/lxwm.htm" target="_blank" rel="nofollow">联系我们</a></li>
+                        </ul>
+                    </div><!--nav_two_t-->
+                </dd>
+                <dd><span>|</span></dd>
+                <dd><a href="#" class="zx_pkv">网站导航</a>
+                    <div class="nav_two_t nav_two_tov">
+                        <table width="160" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td width="40" height="25" valign="middle"><a href="https://www.21food.cn">首页</a></td>
+                                <td width="40" height="25" valign="middle"><a href="https://zs.21food.cn/">招商</a></td>
+                                <td width="40" height="25" valign="middle"><a href="https://www.21food.cn/product/">产品</a></td>
+                                <td width="40" height="25" valign="middle"><a href="https://www.21food.cn/company/">企业</a></td>
+                            </tr>
+                            <tr>
+                                <td width="40" height="25" valign="middle"><a href="https://www.21food.cn/trade/">供应</a></td>
+                                <td width="40" height="25" valign="middle"><a href="https://www.21food.cn/trade/mai.htm">求购</a></td>
+                                <td width="40" height="25" valign="middle"><a href="https://price.21food.cn/">报价</a></td>
+                                <td width="40" height="25" valign="middle"><a href="http://sbt.21food.cn/">标准</a></td>
+                            </tr>
+                            <tr>
+                                <td width="40" height="25" valign="middle"><a href="https://news.21food.cn/">资讯</a></td>
+                                <td width="40" height="25" valign="middle"><a href="https://www.21food.cn/exhibition/">会展</a></td>
+                                <td width="40" height="25" valign="middle"><a href="https://www.21food.cn/hot/">热门</a></td>
+                                <td width="40" height="25" valign="middle"></td>
+                            </tr>
+
+                        </table>
+                    </div><!--nav_two_t-->
+                </dd>
+
+                <dd><span>|</span></dd>
+                <dd><a href="https://www.21food.com/">ENGLISH</a></dd>
+            </dl>
+        </div><!--fr-->
+    </div><!--top_zxx_main-->
+
+
+
+    <script type="text/javascript">
+        topMenu();
+
+        function toMemberURL(obj,url)
+        {
+            obj.href="http://my.21food.cn" + url;
+        }
+
+
+        function toLogin(){
+            var preUrl = encodeURI(encodeURI(document.location.href));
+            document.location.href="http://my.21food.cn/login!toLogin.action?pre_url=";
+        }
+
+        function loginOut(){
+            var preUrl = encodeURI(encodeURI(document.location.href));
+            document.location.href="https://www.21food.cn/member/quit_v2.jsp?pre_url=";
+        }
+
+
+        function otherLoginLogout(){
+            var preUrl = encodeURI(encodeURI(document.location.href));
+            var a = document.getElementById("otherLoginLogout");
+            a.href="http://my.21food.cn/login!otherLogout.action?pre_url=";
+            a.click();
+        }
+
+
+        function toBindUser(){
+            var preUrl = encodeURI(encodeURI(document.location.href));
+            var a = document.getElementById("toBindUser");
+            a.href="https://my.21food.cn/login!bindAccount.action?pre_url=";
+            a.click();
+        }
+
+    </script>
+
+</div><!--header-->
+<div class="content_p content_prod">
+
+
+    <!-- 智能提示JS -->
+    <link href="https://www.21food.cn/style/2016/menu.css?v=1" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://www.21food.cn/resources/js/search.js?v=2017073101"></script>
+
+
+    <div class="main_top">
+        <div class="top_t_l"><a href="/"><img src="https://www.21food.cn/tradeonline/images/v3/images/logo.jpg" /></a><span>产品中心</span></div><!--top_t_l-->
+        <div class="top_t_r">
+            <div class="top_t_rl">
+                <form name="topNavSearch" method="GET" onSubmit="return f_topnavsearch(this);" action="">
+                    <div class="jag_right">
+                        <div class="jag_ttt">
+                            <span class="valt_name">产品</span>
+                            <input type="hidden" class="valt" name="searchItem" id="searchItem" value="product" />
+                        </div><!--jag_ttt-->
+                        <ul class="jat_mnt">
+                            <li data-txt="产品" data-val="product">产品</li>
+                            <li data-txt="供应" data-val="sell">供应</li>
+                            <li data-txt="求购" data-val="buy">求购</li>
+
+                        </ul>
+                    </div><!--jag_right-->
+                    <div class="select_key">
+                        <input name="keys" type="text" id="keys2" class="txt_ser"
+                               placeholder="请输入您想查询的关键"
+                               value=""
+                               onkeyup="selectItem(this.id,event,document.getElementById('searchItem').value)"
+                               autocomplete="off"
+                               onkeydown="if(event.keyCode == 13&&currentSelIndex!=-1)return false;" />
+
+                        <ul class="ulItems" id="ulItems" style="display:none;">
+                        </ul>
+                    </div><!--select_key-->
+                    <input name="" type="submit" class="txt_btnm" value="搜索"/>
+                    <input name="keyword" id="keyword" type="hidden" class="txt_btnm" value="搜索"/>
+                </form>
+
+            </div><!--top_t_rl-->
+
+            <a href="https://www.21food.cn/trade/post_buy_info.html" class="weitu">免费委托找货</a>
+
+
+        </div><!--top_t_r-->
+    </div><!--main_top-->
+
+
+
+
+    <div class="main_nav">
+        <dl>
+            <dd>
+                <a
+                        href="https://www.21food.cn/product/" title="产品中心">产品中心</a>
+            </dd>
+            <dd>
+                <a
+                        href="http://zs.21food.cn" title="食品招商">品牌招商</a>
+            </dd>
+            <dd>
+                <a
+                        href="https://www.21food.cn/trade/mai.htm" title="采购频道">采购通</a>
+            </dd>
+            <dd>
+                <a
+                        href="https://www.21food.cn/trade/"  title="供应频道">供应</a>
+            </dd>
+            <dd>
+                <a
+                        href="https://www.21food.cn/company/" title="企业公司">企业</a>
+            </dd>
+            <dd>
+                <a
+                        href="http://news.21food.cn/" title="食品资讯">资讯</a>
+            </dd>
+
+            <dd>
+                <a
+                        href="http://sbt.21food.cn/" title="食标通">食标通</a>
+            </dd>
+
+            <dd>
+                <a
+                        href="https://www.21food.cn/exhibition/" title="食品展会">展会</a>
+            </dd>
+
+        </dl>
+    </div>
+
+
+    <script type="text/javascript">
+
+        $(document).click(function(){
+            if ($(".jat_mnt").css("display") != "none") $(".jat_mnt").hide();
+        });
+        $(document).ready(function () {
+
+            $(".jag_ttt").click(function (event) {
+                if ($(".jat_mnt").css("display") == "none") {
+                    $(".jat_mnt").show();
+                }
+                else {
+                    $(".jat_mnt").hide();
+                }
+                event.stopPropagation();
+            });
+            $(".jat_mnt li").click(function (event) {
+                $tt = $(this);
+                $(".valt").val($tt.data("val"));
+                $(".valt_name").text($tt.data("txt"));
+                $(".jat_mnt").hide();
+                event.stopPropagation();
+            });
+        });
+    </script>
+
+
+
+
+    <div class="error_main" style="min-height: 510px;">
+        <div class="error_min_t">
+
+            <div class="error_min_t_right">
+                <em>您的IP（113.248.58.217）已被限制访问，请输入以下验证解除屏蔽</em>
+                <form action="" method="post" onsubmit="return check()">
+                    <div class="r_min_t_ui">
+                        <input name="delipcode" type="text" id="delipcode" size="6" class="r_min_t_ft1"> <span><img src="/common/captcha-image.shtml"  onClick="this.src='/common/captcha-image.shtml?'+Math.random()"></span>
+                    </div><!--r_min_t_ui-->
+                    <div class="r_min_t_uiu">
+                        <input name="" type="submit"  value="解除屏蔽" class="r_min_t_uiu_p"/>
+                    </div><!--r_min_t_uiu-->
+                </form>
+
+            </div><!--error_min_t_right-->
+        </div><!--error_min_t-->
+    </div><!--error_main-->
+
+    <div class="footer" id="bottom">
+        <a href="https://www.21food.cn/about/about.htm" target="_blank">关于我们</a> |
+        <a href="https://www.21food.cn/special/member_service/" target="_blank">会员服务 </a> |
+
+        <a href="https://www.21food.cn/special/ad_service/" target="_blank">网站广告</a> |
+        <a href="https://www.21food.cn/about/media/" target="_blank">媒体宣传</a> |
+        <a href="https://www.21food.cn/special/website_build/" target="_blank">网站建设</a> |
+        <a href="http://wx.21food.cn" target="_blank">微信营销通</a> |
+
+        <a href="https://www.21food.cn/about/lxwm.htm" target="_blank">联系我们</a> |
+        <a href="https://www.21food.cn/help/help_problem.html" target="_blank">网站帮助</a><br/>
+
+        <a href="https://www.21food.cn/">食品商务网</a> 版权所有 2002-2016
+        ICP证: 浙B2-20090288-1
+
+
+
+    </div><!--footer-->
+
+</div><!--content_p-->
+
+
+<link href="https://www.21food.cn/style/2016/footer.css" rel="stylesheet" type="text/css" />
+
+
+<div align="center" style="display: none"><script type="text/javascript">var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F130a926bf7ac0d05a0769ad61f7730b2' type='text/javascript'%3E%3C/script%3E"));</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-622315-2', 'auto');ga('send', 'pageview');</script></div>
+</body>
+</html>
+
+
+</title>
+</head>
+<body>
+
+</body>
+</html>

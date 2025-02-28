@@ -1,4 +1,5 @@
 import sqlite3
+from types import GetSetDescriptorType
 
 
 def initDB():
@@ -83,7 +84,6 @@ class Quotation:
     minPrice = None
     price = None
     qTime = None
-
     def __init__(self, id, goodId, goodName, companyId, companyName, maxPrice, minPrice, price, qTime):
         self.id = id
         self.goodId = goodId
@@ -95,27 +95,59 @@ class Quotation:
         self.price = price
         self.qTime = qTime
 
-def saveQuotationData2DB(q:Quotation):
+
+
+def saveQuotationData2DB(q):
     # 连接数据库
     conn = sqlite3.connect("21food.db")
     cur = conn.cursor()
 
     try:
-        # 使用参数化查询避免 SQL 注入
-        sql = '''
-            INSERT INTO t_quotation (good_id, good_name, company_id, company_name, max_price, min_price, price, q_time) 
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        # 查询是否已存在相同的数据（同一天、同一公司、同一商品）
+        sql_check = '''
+            SELECT id FROM t_quotation 
+            WHERE good_id = ? AND company_id = ? AND q_time = ?
         '''
-        # 直接传递 company 中的数据
-        cur.execute(sql, (q.goodId, q.goodName, q.companyId, q.companyName, q.maxPrice, q.minPrice, q.price, q.qTime))
+        cur.execute(sql_check, (q.goodId, q.companyId, q.qTime))
+        result = cur.fetchone()  # 获取第一条匹配的记录
 
-        # 提交事务
-        conn.commit()
-        print("数据插入成功！")
+        if result is None:
+            # 如果不存在相同的数据，则插入新数据
+            sql_insert = '''
+                INSERT INTO t_quotation (good_id, good_name, company_id, company_name, max_price, min_price, price, q_time) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            '''
+            cur.execute(sql_insert, (q.goodId, q.goodName, q.companyId, q.companyName, q.maxPrice, q.minPrice, q.price, q.qTime))
+            conn.commit()
+            print("数据插入成功！🎁🎁🎁")
+        else:
+            print("数据已存在，跳过插入！👣👣👣")
     except Exception as e:
         print(f"插入数据失败：{e}")
     finally:
         # 关闭游标和连接
+        cur.close()
+        conn.close()
+
+def batchSaveQuotationData2DB(quotation_list):
+    conn = sqlite3.connect("21food.db")
+    cur = conn.cursor()
+
+    try:
+        sql = '''
+            INSERT INTO t_quotation (good_id, good_name, company_id, company_name, max_price, min_price, price, q_time) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        '''
+        data = [
+            (q.goodId, q.goodName, q.companyId, q.companyName, q.maxPrice, q.minPrice, q.price, q.qTime)
+            for q in quotation_list
+        ]
+        cur.executemany(sql, data)
+        conn.commit()
+        print(f"成功插入 {len(quotation_list)} 条数据！")
+    except Exception as e:
+        print(f"插入数据失败：{e}")
+    finally:
         cur.close()
         conn.close()
 
