@@ -1,7 +1,6 @@
 import base64
 import os
 
-
 def save_base64_to_png(base64_str, output_path):
     try:
         # 去除可能存在的Base64前缀
