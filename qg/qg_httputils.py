@@ -66,7 +66,7 @@ def priceQuotationController(marketId,provinceCode,pageNum,varietyId):
         "marketId": marketId,
         "provinceCode": provinceCode,
         "pageNum": pageNum,
-        "pageSize": 10,
+        "pageSize": 40,
         "pid": "AE",
         "varietyId": varietyId
     }
