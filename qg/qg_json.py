@@ -2,12 +2,12 @@ import json
 
 
 def getCitys():
-    with open('city.json', 'r', encoding='utf-8') as f:
+    with open('data/city.json', 'r', encoding='utf-8') as f:
         citys = json.load(f)
     return citys
 
 def getFoodAE():
-    with open('good_ae.json', 'r', encoding='utf-8') as f:
+    with open('data/good_ae.json', 'r', encoding='utf-8') as f:
         aes = json.load(f)
     datas = []
     for ae in aes:

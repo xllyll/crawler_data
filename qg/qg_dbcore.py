@@ -26,7 +26,7 @@ def initDB():
             q_time TEXT                           -- 时间
         );
     '''  # 创建数据表
-    conn = sqlite3.connect('qg_food.db')  # 连接数据库（如果不存在则会创建）
+    conn = sqlite3.connect('db/qg_food.db')  # 连接数据库（如果不存在则会创建）
     try:
         # 使用 executescript 方法执行多条 SQL 语句
         conn.executescript(sql)
@@ -40,7 +40,7 @@ def initDB():
 
 def queryAllCompanies():
     # 连接数据库
-    conn = sqlite3.connect("qg_food.db")
+    conn = sqlite3.connect("db/qg_food.db")
     cur = conn.cursor()
     companys = []
     try:
@@ -99,7 +99,7 @@ class QGQuotation:
 
 def saveQuotationData2DB(q:QGQuotation):
     # 连接数据库
-    conn = sqlite3.connect("qg_food.db")
+    conn = sqlite3.connect("db/qg_food.db")
     cur = conn.cursor()
 
     try:
@@ -129,27 +129,7 @@ def saveQuotationData2DB(q:QGQuotation):
         cur.close()
         conn.close()
 
-def batchSaveQuotationData2DB(quotation_list):
-    conn = sqlite3.connect("21food.db")
-    cur = conn.cursor()
 
-    try:
-        sql = '''
-            INSERT INTO t_quotation (good_id, good_name, company_id, company_name, max_price, min_price, price, q_time) 
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-        '''
-        data = [
-            (q.goodId, q.goodName, q.companyId, q.companyName, q.maxPrice, q.minPrice, q.price, q.qTime)
-            for q in quotation_list
-        ]
-        cur.executemany(sql, data)
-        conn.commit()
-        print(f"成功插入 {len(quotation_list)} 条数据！")
-    except Exception as e:
-        print(f"插入数据失败：{e}")
-    finally:
-        cur.close()
-        conn.close()
 
 if __name__ == '__main__':
     initDB()
